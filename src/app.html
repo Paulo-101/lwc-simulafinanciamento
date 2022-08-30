@@ -1,0 +1,22 @@
+<template>
+	<lightning-card>
+		<div class="app slds-p-around_small">
+
+			<p><b>Cálculo de juros</b></p><br>
+
+			<lightning-input type="decimal" label="Valor financiado" name="montante" onchange={varMontante}>
+			</lightning-input>
+
+			<lightning-input type="decimal" label="Valor de entrada" name="valEnt" onchange={varValEnt}>
+			</lightning-input>
+
+			<lightning-combobox name="progress" label="Quantidade de parcelas" value={value} placeholder="--Selecione--"
+				options={options} onchange={handleChange}>
+			</lightning-combobox><br>
+			<p><b>Total : {resultado}</b></p><br>
+
+			<lightning-button variant="brand" type="submit" onclick={varCalc} label="Calcular" title="Primary action"
+				class="slds-m-left_x-small"></lightning-button>
+		</div>
+	</lightning-card>
+</template>
